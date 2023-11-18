@@ -14,12 +14,10 @@ const fetchuser = (req, res, next)=>{
     const data = jwt.verify(token, JWT_SECRET)
     req.user = data.user
 
-
     next()
     }  catch(err){
         res.status(500).json({success: false, error:"No any Account! Sign Up Now"})
         // console.log(err)
-    
         }
 }
 

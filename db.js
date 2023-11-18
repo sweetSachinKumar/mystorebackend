@@ -1,16 +1,13 @@
 require('dotenv').config()
-
 const mongoose = require('mongoose')
 
-// const url = "mongodb://127.0.0.1:27017/myAPI"
+const url = "mongodb://127.0.0.1:27017/myAPI"
 
-const connectDB = async (url) => {
+
+
+const connectDB = async () => {
     console.log("connected to mongodb")
     await mongoose.connect(url)
-    // await mongoose.connect(url, {
-    //     useNewUrlParser:true,
-    //     useUnifiedTopology: true,
-    // })
 }
 
  
